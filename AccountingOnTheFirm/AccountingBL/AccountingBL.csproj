@@ -44,7 +44,6 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Leader.cs" />
     <Compile Include="Models\Programmer.cs" />
-    <Compile Include="Models\Salary.cs" />
     <Compile Include="Models\SalaryAccrual.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

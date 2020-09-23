@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace AccountingUI
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void btn_AddEmployee_Click(object sender, EventArgs e)
+        {
+            EmployeeAddForm form = new EmployeeAddForm();
+            form.ShowDialog();
         }
     }
 }
