@@ -1,6 +1,6 @@
 ﻿namespace AccountingUI
 {
-    partial class EmployeeAddForm
+    partial class ProgrammerAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,14 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox_Surname = new System.Windows.Forms.TextBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.textBox_MiddleName = new System.Windows.Forms.TextBox();
+            this.btn_OK = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.numericUpDown_Experience = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_Position = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Experience)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,35 +78,37 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Middle Name:";
             // 
-            // textBox1
+            // textBox_Surname
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBox_Surname.Location = new System.Drawing.Point(113, 30);
+            this.textBox_Surname.Name = "textBox_Surname";
+            this.textBox_Surname.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Surname.TabIndex = 4;
             // 
-            // textBox2
+            // textBox_Name
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBox_Name.Location = new System.Drawing.Point(113, 71);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Name.TabIndex = 5;
             // 
-            // textBox3
+            // textBox_MiddleName
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBox_MiddleName.Location = new System.Drawing.Point(113, 109);
+            this.textBox_MiddleName.Name = "textBox_MiddleName";
+            this.textBox_MiddleName.Size = new System.Drawing.Size(100, 20);
+            this.textBox_MiddleName.TabIndex = 6;
             // 
-            // button1
+            // btn_OK
             // 
-            this.button1.Location = new System.Drawing.Point(181, 293);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_OK.Location = new System.Drawing.Point(196, 268);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(75, 23);
+            this.btn_OK.TabIndex = 8;
+            this.btn_OK.Text = "OK";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // label5
             // 
@@ -117,40 +119,48 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Position:";
             // 
-            // numericUpDown1
+            // numericUpDown_Experience
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(113, 151);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 10;
+            this.numericUpDown_Experience.Location = new System.Drawing.Point(113, 151);
+            this.numericUpDown_Experience.Name = "numericUpDown_Experience";
+            this.numericUpDown_Experience.Size = new System.Drawing.Size(100, 20);
+            this.numericUpDown_Experience.TabIndex = 10;
             // 
-            // checkedListBox1
+            // comboBox_Position
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(113, 193);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(109, 19);
-            this.checkedListBox1.TabIndex = 11;
+            this.comboBox_Position.FormattingEnabled = true;
+            this.comboBox_Position.Items.AddRange(new object[] {
+            "Leader",
+            "Programmer"});
+            this.comboBox_Position.Location = new System.Drawing.Point(113, 196);
+            this.comboBox_Position.Name = "comboBox_Position";
+            this.comboBox_Position.Size = new System.Drawing.Size(100, 21);
+            this.comboBox_Position.TabIndex = 11;
             // 
-            // EmployeeAddForm
+            // ProgrammerAddForm
             // 
+            this.AcceptButton = this.btn_OK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 340);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(283, 303);
+            this.Controls.Add(this.comboBox_Position);
+            this.Controls.Add(this.numericUpDown_Experience);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_OK);
+            this.Controls.Add(this.textBox_MiddleName);
+            this.Controls.Add(this.textBox_Name);
+            this.Controls.Add(this.textBox_Surname);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "EmployeeAddForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ProgrammerAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmployeeAddForm";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Experience)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,12 +172,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox_Surname;
+        private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.TextBox textBox_MiddleName;
+        private System.Windows.Forms.Button btn_OK;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_Experience;
+        private System.Windows.Forms.ComboBox comboBox_Position;
     }
 }

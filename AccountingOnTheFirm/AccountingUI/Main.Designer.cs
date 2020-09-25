@@ -32,23 +32,31 @@
             this.btn_AddEmployee = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_EditEmployee = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_PaySalary = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 110);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 74);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(606, 318);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(711, 311);
             this.dataGridView1.TabIndex = 0;
             // 
             // btn_AddEmployee
             // 
-            this.btn_AddEmployee.Location = new System.Drawing.Point(12, 45);
+            this.btn_AddEmployee.Location = new System.Drawing.Point(12, 27);
             this.btn_AddEmployee.Name = "btn_AddEmployee";
-            this.btn_AddEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddEmployee.Size = new System.Drawing.Size(75, 41);
             this.btn_AddEmployee.TabIndex = 2;
             this.btn_AddEmployee.Text = "Add Employee";
             this.btn_AddEmployee.UseVisualStyleBackColor = true;
@@ -60,7 +68,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(630, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(735, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,11 +78,50 @@
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
+            // btn_EditEmployee
+            // 
+            this.btn_EditEmployee.Location = new System.Drawing.Point(93, 27);
+            this.btn_EditEmployee.Name = "btn_EditEmployee";
+            this.btn_EditEmployee.Size = new System.Drawing.Size(75, 41);
+            this.btn_EditEmployee.TabIndex = 4;
+            this.btn_EditEmployee.Text = "Edit";
+            this.btn_EditEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(174, 27);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(75, 41);
+            this.btn_Delete.TabIndex = 5;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_PaySalary
+            // 
+            this.btn_PaySalary.Location = new System.Drawing.Point(327, 407);
+            this.btn_PaySalary.Name = "btn_PaySalary";
+            this.btn_PaySalary.Size = new System.Drawing.Size(75, 23);
+            this.btn_PaySalary.TabIndex = 6;
+            this.btn_PaySalary.Text = "Pay salary";
+            this.btn_PaySalary.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(602, 47);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 7;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 440);
+            this.ClientSize = new System.Drawing.Size(735, 440);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btn_PaySalary);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_EditEmployee);
             this.Controls.Add(this.btn_AddEmployee);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -96,6 +143,10 @@
         private System.Windows.Forms.Button btn_AddEmployee;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.Button btn_EditEmployee;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_PaySalary;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
