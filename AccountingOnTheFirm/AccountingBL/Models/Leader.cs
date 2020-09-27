@@ -9,6 +9,6 @@ namespace AccountingBL.Models
 {
     public class Leader : Employee
     {
-        internal List<Programmer> PeopleToManage { get; set; }
+        public List<Programmer> PeopleToManage { get; set; }
     }
 }

@@ -101,7 +101,6 @@
             // 
             // btn_OK
             // 
-            this.btn_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_OK.Location = new System.Drawing.Point(196, 268);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(75, 23);
@@ -122,9 +121,24 @@
             // numericUpDown_Experience
             // 
             this.numericUpDown_Experience.Location = new System.Drawing.Point(113, 151);
+            this.numericUpDown_Experience.Maximum = new decimal(new int[] {
+            45,
+            0,
+            0,
+            0});
+            this.numericUpDown_Experience.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown_Experience.Name = "numericUpDown_Experience";
             this.numericUpDown_Experience.Size = new System.Drawing.Size(100, 20);
             this.numericUpDown_Experience.TabIndex = 10;
+            this.numericUpDown_Experience.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // comboBox_Position
             // 

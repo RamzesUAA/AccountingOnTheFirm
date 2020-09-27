@@ -12,6 +12,6 @@ namespace AccountingBL.Models
         public string Name { get; set; }
         public string MiddleName { get; set; }
         public int Experience { get; set; }
-        public Dictionary<DateTime, double> Salary { get; set; }
+        public double Salary { get; set; }
     }
 }

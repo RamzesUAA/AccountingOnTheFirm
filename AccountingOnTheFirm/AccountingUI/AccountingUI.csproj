@@ -60,6 +60,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MonthsReports.cs" />
+    <Compile Include="Services\StringExtensions.cs" />
     <EmbeddedResource Include="ProgrammerAddForm.resx">
       <DependentUpon>ProgrammerAddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,9 +90,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AccountingBL\AccountingBL.csproj">
       <Project>{533e08eb-7b1b-45e1-8899-eb3d73d53bb8}</Project>

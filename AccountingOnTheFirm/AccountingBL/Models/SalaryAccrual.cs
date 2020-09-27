@@ -26,30 +26,29 @@ namespace AccountingBL.Models
         }
 
         //Leader
-        public Dictionary<DateTime, double> SalaryAccrualToLeader(DateTime accrualTime, double salaryPerMonth, double percentage, double fine, double sanctionPercentage = 0)
+        public double SalaryAccrualToLeader(DateTime accrualTime, double salaryPerMonth, double percentage, double fine, double sanctionPercentage = 0)
         {
-            Leader.Salary.Add(accrualTime, salaryPerMonth);
-            Leader.Salary[accrualTime] += Leader.PeopleToManage.Sum(programmer => programmer.Salary[accrualTime] * percentage / 100.0);
-            Leader.Salary[accrualTime] -= Leader.Salary[accrualTime] * sanctionPercentage / 100.0;
-
+            Leader.Salary = salaryPerMonth;
+            Leader.Salary += Leader.PeopleToManage.Sum(programmer => programmer.Salary * percentage / 100.0);
+            Leader.Salary -= Leader.Salary * sanctionPercentage / 100.0;
             int award = Leader.Experience % 10;
-            Leader.Salary[accrualTime] += award * 0.1;
+            Leader.Salary += award * 0.1;
 
             return Leader.Salary;
         }
 
         // Programmer
-        public Dictionary<DateTime, double> SalaryAccrualToProgrammer(double salaryPerHour, double NeededWorkedHours, double fine, DateTime accrualTime, double sanctionPercentage = 0)
+        public double SalaryAccrualToProgrammer(double salaryPerHour, double NeededWorkedHours, double fine, DateTime accrualTime, double sanctionPercentage = 0)
         {
-            Programmer.Salary.Add(accrualTime, Programmer.CountWorkedHours * salaryPerHour);
+            Programmer.Salary = Programmer.CountWorkedHours * salaryPerHour;
             if (Programmer.CountWorkedHours < NeededWorkedHours)
             {
-                Programmer.Salary[accrualTime] -= Programmer.Salary[accrualTime] * fine / 100.0;
+                Programmer.Salary -= Programmer.Salary * fine / 100.0;
             }
-            Programmer.Salary[accrualTime] -= Programmer.Salary[accrualTime] * sanctionPercentage / 100.0;
+            Programmer.Salary -= Programmer.Salary * sanctionPercentage / 100.0;
 
             int award = Programmer.Experience / 10;
-            Programmer.Salary[accrualTime] += award * 10 / 100.0;
+            Programmer.Salary += award * 10 / 100.0;
 
             return Programmer.Salary;
         }
